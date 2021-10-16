@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="word"
+            type="String" />
+
+        <variable
+            name="origin"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/word_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:imeOptions="actionSearch"
+            android:breakStrategy="balanced"
+            android:background="@android:color/transparent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+            android:inputType="textPersonName"
+            android:singleLine="false"
+            android:hint="@string/search_a_word"
+            android:text="@={word}"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:importantForAutofill="no">
+            <requestFocus/>
+        </EditText>
+
+
+        <TextView
+            android:id="@+id/origin_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/word_edit_text"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/word_edit_text"
+            app:layout_constraintTop_toBottomOf="@+id/word_edit_text"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="@{origin}"
+            tools:text="Early 19th century: variant of earlier hollo ; related to holla." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
