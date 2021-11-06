@@ -44,7 +44,4 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         Snackbar.make(binding.root, textId, Snackbar.LENGTH_SHORT).show()
     }
 
-    companion object {
-        private const val TAG = "MainActivity"
-    }
 }
