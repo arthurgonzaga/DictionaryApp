@@ -38,6 +38,10 @@
 A simple app that shows the origin of an english word.   
 I created to put in practice the MVP and MVVM architecture and to learn RxJava
 
+## Architecture
+
+![](images/mvp.png)
+
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * RxJava
