@@ -15,8 +15,10 @@ import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity(), MainContract.View {
 
+    var presenter: MainContract.Presenter = MainPresenter(this)
+
     private lateinit var binding: ActivityMainBinding
-    private val presenter by lazy { MainPresenter(this) }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         binding.wordEditText.textChanges()
             .skipInitialValue()
             .doOnNext { binding.descriptionTextView.text = "" }
-            .debounce(1, TimeUnit.SECONDS)
+            .debounce(DEBOUNCE_TIMEOUT, TimeUnit.MILLISECONDS)
             .filter { it.toString().isNotBlank() }
             .doOnNext { text-> presenter.searchWord(text.toString()) }
             .subscribe()
@@ -44,4 +46,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         Snackbar.make(binding.root, textId, Snackbar.LENGTH_SHORT).show()
     }
 
+    companion object {
+        const val DEBOUNCE_TIMEOUT = 700L
+    }
 }

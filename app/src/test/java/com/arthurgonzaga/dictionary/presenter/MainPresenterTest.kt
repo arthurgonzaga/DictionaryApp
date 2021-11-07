@@ -1,10 +1,8 @@
 package com.arthurgonzaga.dictionary.presenter
 
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.arthurgonzaga.dictionary.api.ApiService
 import com.arthurgonzaga.dictionary.contract.MainContract
 import com.arthurgonzaga.dictionary.model.WordResponse
-import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.plugins.RxJavaPlugins
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -14,8 +12,6 @@ import org.junit.Test
 import org.mockito.Mockito.*
 import java.lang.Exception
 import io.reactivex.rxjava3.android.plugins.RxAndroidPlugins
-import io.reactivex.rxjava3.core.Scheduler
-import java.util.concurrent.Callable
 
 
 class MainPresenterTest {
