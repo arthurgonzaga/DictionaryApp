@@ -17,16 +17,15 @@
   <h3 align="center">DictionaryApp</h3>
 
   <p align="center">
-    A simple app that shows the origin of an english word
-    <br />
-    <a href="https://github.com/arthurgonzaga/DictionaryApp"><strong>Explore the docs »</strong></a>
+    A simple app that shows the origin of an english word.
     <br />
     <br />
-    <a href="https://github.com/arthurgonzaga/DictionaryApp">View Demo</a>
-    ·
-    <a href="https://github.com/arthurgonzaga/DictionaryApp/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/arthurgonzaga/DictionaryApp/issues">Request Feature</a>
+    <a href="https://github.com/arthurgonzaga/DictionaryApp">MVP »</a>
+    <br />
+    <a href="https://github.com/arthurgonzaga/DictionaryApp">MVVM »</a>
+    <br />
+    <a href="https://github.com/arthurgonzaga/DictionaryApp/issues">Clean Architecture »</a>
+    <br />
   </p>
 </p>
 
@@ -35,8 +34,7 @@
 
 ![](https://media3.giphy.com/media/ktIFEnxUNhzsNOOsVk/giphy.gif?cid=790b761160defca45fe634fbb2ed202c5b4298afc88766e6&rid=giphy.gif&ct=g)
 
-A simple app that shows the origin of an english word.   
-I created to put in practice the MVP and MVVM architecture and to learn RxJava
+I created this app to put in practice the MVP, MVVM and Clean Architecture at the same time I learn RxJava;
 
 ## Architecture
 
@@ -45,11 +43,12 @@ I created to put in practice the MVP and MVVM architecture and to learn RxJava
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * RxJava
-* Material You
 * Retrofit
 * MVP
 * MVVM
+* Clean Architecture
 * Testing
+* Material You
 
 
 
