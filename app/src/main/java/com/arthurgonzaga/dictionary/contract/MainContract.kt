@@ -1,8 +1,5 @@
 package com.arthurgonzaga.dictionary.contract
 
-import com.arthurgonzaga.dictionary.api.responses.WordResponse
-import io.reactivex.rxjava3.core.Single
-
 interface MainContract {
 
     interface View {

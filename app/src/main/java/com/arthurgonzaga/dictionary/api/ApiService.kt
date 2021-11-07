@@ -1,6 +1,6 @@
 package com.arthurgonzaga.dictionary.api
 
-import com.arthurgonzaga.dictionary.api.responses.WordResponse
+import com.arthurgonzaga.dictionary.model.WordResponse
 import io.reactivex.rxjava3.core.Single
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory

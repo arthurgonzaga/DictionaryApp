@@ -1,4 +1,4 @@
-package com.arthurgonzaga.dictionary.api.responses
+package com.arthurgonzaga.dictionary.model
 
 data class WordResponse(
     val origin: String = ""
