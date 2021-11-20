@@ -15,15 +15,18 @@ import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity(), MainContract.View {
 
-    var presenter: MainContract.Presenter = MainPresenter(this)
+    private var _presenter: MainContract.Presenter? = null
+    private val presenter get() = _presenter!!
 
     private lateinit var binding: ActivityMainBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        _presenter = MainPresenter(this)
+
         setupEditTextListener()
     }
 
@@ -44,6 +47,11 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     override fun showErrorSnackBar(message: String?) {
         val textId = if(message?.contains("404") == true) R.string.word_not_found else R.string.something_wrong
         Snackbar.make(binding.root, textId, Snackbar.LENGTH_SHORT).show()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _presenter = null
     }
 
     companion object {
