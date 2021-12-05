@@ -3,28 +3,21 @@ package com.arthurgonzaga.dictionary.ui
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import androidx.test.rule.ActivityTestRule
 import com.arthurgonzaga.dictionary.R
 import com.arthurgonzaga.dictionary.api.ApiService
-import com.arthurgonzaga.dictionary.contract.MainContract
 import com.arthurgonzaga.dictionary.model.WordResponse
-import com.arthurgonzaga.dictionary.presenter.MainPresenter
-import io.reactivex.rxjava3.android.plugins.RxAndroidPlugins
+import com.arthurgonzaga.dictionary.repository.MainRepositoryImpl
 import io.reactivex.rxjava3.core.Single
-import io.reactivex.rxjava3.plugins.RxJavaPlugins
-import io.reactivex.rxjava3.schedulers.Schedulers
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mockito
 import org.mockito.Mockito.`when`
-import java.lang.Exception
 
 @RunWith(AndroidJUnit4::class)
 @LargeTest
@@ -40,10 +33,7 @@ class MainActivityTest {
 
     @Before
     fun setUp() {
-        Mockito.reset(service)
-        activityRule.activity.apply {
-            presenter = MainPresenter(this, service)
-        }
+        activityRule.activity.viewModel.repository = MainRepositoryImpl(service)
     }
 
     @Test

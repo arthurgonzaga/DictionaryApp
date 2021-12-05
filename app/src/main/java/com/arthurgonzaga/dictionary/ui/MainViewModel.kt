@@ -12,7 +12,7 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 
 class MainViewModel(
-    private val repository: MainRepository = MainRepositoryImpl(ApiService.getInstance())
+    var repository: MainRepository = MainRepositoryImpl(ApiService.getInstance())
 ): ViewModel() {
 
     private val disposables = CompositeDisposable()
