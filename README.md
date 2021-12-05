@@ -20,7 +20,7 @@
     A simple app that shows the origin of an english word.
     <br />
     <br />
-    <a href="https://github.com/arthurgonzaga/DictionaryApp">MVP »</a>
+    <a href="https://github.com/arthurgonzaga/DictionaryApp/tree/mvp">MVP »</a>
     <br />
     <a href="https://github.com/arthurgonzaga/DictionaryApp/tree/mvvm">MVVM »</a>
     <br />
