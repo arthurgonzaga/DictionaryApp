@@ -22,7 +22,7 @@
     <br />
     <a href="https://github.com/arthurgonzaga/DictionaryApp">MVP »</a>
     <br />
-    <a href="https://github.com/arthurgonzaga/DictionaryApp">MVVM »</a>
+    <a href="https://github.com/arthurgonzaga/DictionaryApp/tree/mvvm">MVVM »</a>
     <br />
     <a href="https://github.com/arthurgonzaga/DictionaryApp/issues">Clean Architecture »</a>
     <br />
