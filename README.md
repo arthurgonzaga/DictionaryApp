@@ -38,7 +38,7 @@ I created this app to put in practice the MVP, MVVM and Clean Architecture at th
 
 ## Architecture
 
-![](images/mvp.png)
+![](images/mvvm.png)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
